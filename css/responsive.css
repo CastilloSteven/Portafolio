@@ -1,0 +1,13 @@
+@media screen and (max-width:768px){
+    .hgroup{
+        padding: 1rem;
+    }
+    .article{
+        width: 100%;
+        margin: 2rem 0rem;
+        border-radius: 0;
+    }
+    .mi__p{
+        width: 100%;
+    }
+}
