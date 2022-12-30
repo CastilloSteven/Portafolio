@@ -193,7 +193,7 @@ a{
 /* footer */
 .footer{
     width: 100%;
-    height: 20vh;
+    min-height: 20vh;
     background-color: var(--color-Claro);
     color: var(--color-Letra);
     text-align: center;
@@ -204,6 +204,7 @@ a{
 }
 .footer__ul{
     margin-top: 1rem;
+    padding: 1rem;
 }
 .footer__li{
     display: inline;
