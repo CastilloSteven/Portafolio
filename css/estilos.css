@@ -63,7 +63,7 @@ body{
     justify-content: center;
     align-items: center;
     box-shadow: 0rem 0rem 1rem var(--colorLetra);
-    border-radius: 3rem;
+    border-radius: 1rem;
     color: var(--colorLetra);
 }
 .nav__btn.activo{
@@ -81,14 +81,15 @@ body{
 .header{
     width: 80%;
     min-width: 15rem;
-    margin: auto;
+    margin: 1rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
     padding: 2rem;
-    box-shadow: 0rem 0.3rem 0.5rem black;
+    box-shadow: 0rem 0rem 0.5rem var(--colorLetra);
     color: var(--colorLetra);
+    border-radius: 2rem;
 }
 .header__txt{
     margin: auto 2rem;
@@ -102,16 +103,34 @@ body{
     font-size: 2em;
 }
 .header__link{
-    font-size: 1.5em;
+    padding: 1rem;
 }
-.header__a{}
+.header__a{
+    margin: 1rem;
+}
+.header__svg{
+    width: 2rem;
+    height: 2rem;
+}
+.svg__github{
+    transition: color 0.5s, background-color 0.5s;
+}
+.svg__github:hover{
+    color: rgb(36, 196, 76);
+
+}
+.svg__linkedin{
+    transition: color 0.5s, background-color 0.5s;
+}
+.svg__linkedin:hover{
+    color: rgb(0, 114, 177);
+}
 .header__imgContenedor{
     width: 30%;
     min-width: 13rem;
 }
 .header__img{
     border-radius: 3rem;
-    box-shadow: 0rem 0rem 0.5rem var(--colorLetra);
 }
 
 /* main - section */
@@ -128,26 +147,62 @@ body{
 .section{
     width: 100%;
     min-height: 50vh;
-    box-shadow: 0rem 0.3rem 0.5rem black;
+    box-shadow: 0rem 0rem 0.5rem var(--colorLetra);
+    border-radius: 2rem;
 }
 .section__titulo{
-    padding: 1rem 2rem;
+    padding: 2rem;
 }
-.section__h2{}
+.section__h2 , .header__p{
+    position: relative;
+    width: fit-content;
+}
+.section__h2::after , .header__p::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--colorLetra);
+    left: 0;
+    top: 100%;
+
+
+}
 .section__contenido{
     padding: 1rem 2rem;
     width: 100%;
 }
-.section__imgProyecto{}
-
+/* proyectos */
+.proyecto__contenido{
+    margin-bottom: 1rem;
+}
+.proyecto{
+    width: 14rem;
+    padding: 0.5rem;
+    background-color: var(--colorFondo);
+    box-shadow: 0rem 0rem 1rem var(--colorLetra);
+    border-radius: 1rem;
+}
+.proyecto__imgContenedor{
+    width: 13rem;
+}
+.proyecto__img{
+    border-radius: 1rem;
+}
+.proyecto__txt{
+    padding: 0.5rem;
+    text-align: center;
+}
+.proyecto__h2{}
+/* sobre mi */
 .section__p{
     font-size: 1.1em;
     line-height: 1.6rem;
 }
-
+/* footer */
 .footer{
     width: 100%;
-    background-color: gray;
+    background-color: rgb(59, 59, 59);
     padding: 1rem;
     margin-top: 2rem;
     text-align: center;
@@ -163,4 +218,8 @@ body{
 }
 .footer__li{
     padding: 1rem;
+}
+.footer__svg{
+    width: 2rem;
+    height: 2rem;
 }
