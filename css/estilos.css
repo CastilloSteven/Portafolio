@@ -1,15 +1,14 @@
+/* config */
+:root{
+    --colorLetra:rgb(0, 0, 0);
+    --colorFondo:rgb(206, 206, 206);
+}
+/* reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-:root{
-    
-}
-::-webkit-scrollbar {
-}
-
 html, body{
     width: 100%;
     font-size: 100%;
@@ -32,6 +31,51 @@ img{
     height: 100%;
     object-fit: cover;
 }
+button{
+    border: none;
+    background-color: inherit;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* body */
+body{
+    background-color: var(--colorFondo);
+    transition: background-color 1s;
+}
+/* nav */
+.nav{
+    width: 80%;
+    margin: auto;
+    min-width: 15rem;
+}
+.nav__contenido{
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+}
+.nav__btn{
+    margin-right: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0rem 0rem 1rem var(--colorLetra);
+    border-radius: 3rem;
+    color: var(--colorLetra);
+}
+.nav__btn.activo{
+    box-shadow: 0rem 0rem 1rem var(--colorLetra) inset;
+}
+.nav__svg{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.navBtn__p{
+    margin: 0rem 1rem;
+}
 
 /* header */
 .header{
@@ -44,7 +88,7 @@ img{
     flex-flow: row wrap;
     padding: 2rem;
     box-shadow: 0rem 0.3rem 0.5rem black;
-
+    color: var(--colorLetra);
 }
 .header__txt{
     margin: auto 2rem;
@@ -67,7 +111,7 @@ img{
 }
 .header__img{
     border-radius: 3rem;
-    box-shadow: 0rem 0rem 0.5rem 0.2rem rgb(74, 65, 65);
+    box-shadow: 0rem 0rem 0.5rem var(--colorLetra);
 }
 
 /* main - section */
@@ -75,6 +119,7 @@ img{
     width: 80%;
     min-width: 15rem;
     margin: auto;
+    color: var(--colorLetra);
 }
 .main__separador{
     width: 100%;
@@ -106,6 +151,7 @@ img{
     padding: 1rem;
     margin-top: 2rem;
     text-align: center;
+    color: var(--colorLetra);
 }
 .footer__titulo{
     padding: 0.5rem;
