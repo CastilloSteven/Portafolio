@@ -148,7 +148,7 @@ body{
 .section{
     width: 100%;
     min-height: 50vh;
-    box-shadow: 0rem 0rem 0.3rem var(--colorLetra);
+    box-shadow: 0rem 0rem 0.3rem var(--colorLetra) inset;
     border-radius: 2rem;
 }
 .section__titulo{
@@ -176,17 +176,23 @@ body{
 /* proyectos */
 .proyecto__contenido{
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row wrap;
 }
 .proyecto{
     width: 14rem;
+    margin: 0rem 1rem;
     max-width: 100%;
-    padding: 0.5rem;
     background-color: var(--colorFondo);
     box-shadow: 0rem 0rem 0.3rem var(--colorLetra);
     border-radius: 1rem;
 }
 .proyecto__imgContenedor{
-    width: 100%;
+    width: 13rem;
+    height: 13rem;
+    margin: 0.5rem auto;
 }
 .proyecto__img{
     border-radius: 1rem;
@@ -195,7 +201,11 @@ body{
     padding: 0.5rem;
     text-align: center;
 }
-/* .proyecto__h2{} */
+.proyecto__h2{}
+.proyecto__btn{
+    margin: 0.5rem;
+}
+
 /* sobre mi */
 .section__p{
     font-size: 1.1em;
