@@ -1,7 +1,9 @@
 /* config */
 :root{
     --colorLetra:rgb(0, 0, 0);
-    --colorFondo:rgb(206, 206, 206);
+    --colorFondo:rgb(141, 141, 141);
+    /* --colorLetra:rgb(0, 0, 0);
+    --colorFondo:rgb(206, 206, 206); */
 }
 /* reset */
 *{
@@ -51,7 +53,7 @@ body{
 }
 .nav__contenido{
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,13 +65,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0rem 0rem 0.5rem var(--colorLetra);
-    border-radius: 1rem;
+    box-shadow: 0rem 0rem 0.3rem var(--colorLetra) inset;
     color: var(--colorLetra);
     letter-spacing: 1px;
 }
 .nav__btn.activo{
-    box-shadow: 0rem 0rem 0.5rem var(--colorLetra) inset;
+    box-shadow: 0rem 0rem 0.3rem var(--colorLetra) inset;
 }
 .nav__svg{
     width: 1.5rem;
@@ -81,6 +82,7 @@ body{
 
 /* header */
 .header{
+    padding: 2rem;
     width: 80%;
     min-width: 15rem;
     margin: 1rem auto;
@@ -88,9 +90,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
-    padding: 2rem;
     color: var(--colorLetra);
-    border-radius: 2rem;
 }
 .header__txt{
     margin: auto 2rem;
@@ -145,42 +145,40 @@ body{
     color: var(--colorLetra);
     letter-spacing: 1px;
 }
-.main__separador{
-    width: 100%;
-    height: 2.5rem;
-}
 .section{
     width: 100%;
-    min-height: 50vh;
-    box-shadow: 0rem 0rem 0.3rem var(--colorLetra) inset;
-    border-radius: 2rem;
+    margin: 2rem 0rem;
 }
 .section__titulo{
     padding: 2rem;
 }
 .section__h2{
-    padding: 0rem 1rem;
-}
-.section__h2 , .header__p{
-    position: relative;
-    width: fit-content;
-    margin: auto;
-}
-.section__h2::after , .header__p::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0.2rem;
-    background-color: var(--colorLetra);
-    left: 0;
-    top: 100%;
-
-
+    border-bottom: 0.2rem solid var(--colorLetra);
+    text-align: center;
 }
 .section__contenido{
     padding: 1rem 2rem;
     width: 100%;
 }
+/* .section__p--resaltado{} */
+
+/* lenguajes */
+
+.section__ul--lenguajes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.lenguajes__li{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+}
+.lenguajes__img{
+    object-fit: contain;
+}
+
 /* proyectos */
 .proyecto__contenido{
     margin-bottom: 1rem;
@@ -188,31 +186,33 @@ body{
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
+    gap: 2rem;
 }
 .proyecto{
-    width: 14rem;
-    margin: 1rem;
-    max-width: 100%;
-    background-color: var(--colorFondo);
-    box-shadow: 0rem 0rem 0.3rem var(--colorLetra);
-    border-radius: 1rem;
+    width: 45%;
+    min-width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
 }
 .proyecto__imgContenedor{
-    width: 13rem;
-    height: 13rem;
-    margin: 0.5rem auto;
+    width: 100%;
+    height: auto;
 }
-.proyecto__img{
-    border-radius: 1rem;
-}
-.proyecto__txt{
-    padding: 0.5rem;
-    text-align: center;
-}
-/* .proyecto__h2{} */
 .proyecto__btn{
     margin: 0.5rem;
+    display: block;
 }
+.proyecto__lenguajes{
+
+}
+.proyecto__lenguajes--img{
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+}
+
 
 /* sobre mi */
 .section__p{
